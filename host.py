@@ -5,11 +5,11 @@ Host component for apps.
 """
 
 ## Framework
-import app.base
+import qpyapp.base
 import socket
 
 
-class HostComp(app.base.Component):
+class HostComp(qpyapp.base.Component):
     def __init__(self, app):
         ## Get git data
         self.hostname = socket.gethostname()

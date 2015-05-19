@@ -5,7 +5,7 @@ Error handlers for apps.
 """
 
 ## Framework
-import app.base
+import qpyapp.base
 import sys
 import traceback
 import pygments as pyg
@@ -15,7 +15,7 @@ pytb = pyglex.get_lexer_by_name('pytb')
 term = pygfrmt.get_formatter_by_name('terminal256')
 
 
-class ErrorPrinter(app.base.Component):
+class ErrorPrinter(qpyapp.base.Component):
     _err_sep = "=" * 79 + "\n"
 
     def handle_error(self, app):

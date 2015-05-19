@@ -5,7 +5,7 @@ Git component for apps.
 """
 
 ## App Framework
-import app.base
+import qpyapp.base
 
 ## Git framework
 import git
@@ -16,7 +16,7 @@ _version_kwargs = dict(
 )
 
 
-class GitComp(app.base.Component):
+class GitComp(qpyapp.base.Component):
     def __init__(self, app):
         ## Get git date
         self._init_git()

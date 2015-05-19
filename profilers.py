@@ -5,13 +5,13 @@ Profiling facilities for apps.
 """
 
 ## Framework
-import app.base
+import qpyapp.base
 import cProfile as profile
 import subprocess as sp
 import types
 
 
-class Profiler(app.base.Component):
+class Profiler(qpyapp.base.Component):
     """ The :class:`Profiler` component wrap's the run method of its app with
     profiling facilities. If the app has a *prof_fname* attribute, it saves the
     stats to that file. If it also has a *prof_img_fname* attribute, is creates

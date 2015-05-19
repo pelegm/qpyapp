@@ -5,7 +5,7 @@ Argument parsing for applications.
 """
 
 ## Framework
-import app.base
+import qpyapp.base
 
 ## Argument parsing
 import argparse as ap
@@ -64,7 +64,7 @@ class Argument(object):
         return _kwargs
 
 
-class ArgParser(app.base.Component):
+class ArgParser(qpyapp.base.Component):
     arguments = [
         Argument(("--key",), required=True)
     ]

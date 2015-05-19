@@ -8,7 +8,7 @@ Logging facilities for apps.
 __log_proxy__ = 1
 
 ## Framework
-import app.base
+import qpyapp.base
 import logging
 logging.__log_proxy__ = 1
 import sys
@@ -490,7 +490,7 @@ def get_logger(name, level=DEBUG, prompt=None, color=None, relpath=None):
 ## ----- Main Component ----- ##
 ################################
 
-class SimpleLogger(app.base.Component):
+class SimpleLogger(qpyapp.base.Component):
     """ The simple logger overloads the app with debug/info/warn/error/critical
     methods for logging, where the handler is the app's prompt method. """
     def __init__(self, app):

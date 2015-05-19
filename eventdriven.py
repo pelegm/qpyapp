@@ -5,7 +5,7 @@ An event-driven application framework.
 """
 
 ## Framework
-import app.base
+import qpyapp.base
 
 ## Prompting
 import pyslext.console as cns
@@ -15,7 +15,7 @@ class DummyEngine(object):
     pass
 
 
-class EventDrivenApplication(app.base.Application):
+class EventDrivenApplication(qpyapp.base.Application):
     engine_class = None
     engine_kwargs = {}
 
