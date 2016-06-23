@@ -109,8 +109,18 @@ class KWLogRecord(logging.LogRecord):
         ## empty dictionary (in which case no formatting should be made), or it
         ## is a non-empty dictionary (in which case formatting should be made)
         try:
-            return msg.format(**self.args)
-        except TypeError:
+            args = {}
+            for (k, v) in self.args.viewitems():
+
+                ## Unicode arg?
+                if type(v) is unicode:
+                    args[k] = v.encode('utf8')
+                else:
+                    args[k] = v
+
+            return msg.format(**args)
+
+        except AttributeError:
             return msg
 
 
